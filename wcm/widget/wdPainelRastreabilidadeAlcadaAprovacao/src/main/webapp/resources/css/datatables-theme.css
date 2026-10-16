@@ -1,0 +1,77 @@
+/* DataTables uses the same BEVAP tokens as the other reusable components. */
+.alcada-widget .table-scroll .dt-container { margin: 0; color: var(--ink); font-family: var(--font); }
+.alcada-widget .table-scroll .dt-container .dt-layout-row { margin: 0; }
+.alcada-widget .table-scroll .dt-container .dt-layout-cell { padding: 0; }
+.alcada-widget table.dataTable.data-table { margin: 0; border-spacing: 0; border-collapse: separate; table-layout: fixed; }
+.alcada-widget table.dataTable.data-table > thead > tr > th { background: #f7f9fc; color: #68758a; font-size: calc(var(--ui-unit) * 0.625); font-weight: 700; text-transform: uppercase; letter-spacing: .035em; text-align: left; padding: calc(var(--ui-unit) * 0.875) calc(var(--ui-unit) * 0.8125); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 2; }
+.alcada-widget table.dataTable.data-table > tbody > tr > td { padding: calc(var(--ui-unit) * 0.9375) calc(var(--ui-unit) * 0.8125); border-bottom: 1px solid #edf0f4; background: white; vertical-align: middle; color: #344258; line-height: 1.5; box-shadow: none; text-align: left; }
+.alcada-widget table.dataTable.data-table > tbody > tr:last-child > td { border-bottom: 0; }
+.alcada-widget table.dataTable.data-table > tbody > tr:hover > td { background: #f9fbfd; }
+.alcada-widget table.dataTable.data-table > thead > tr > th.align-right,
+.alcada-widget table.dataTable.data-table > tbody > tr > td.align-right { text-align: right; }
+.alcada-widget table.dataTable.data-table > thead > tr > th.sticky-start,
+.alcada-widget table.dataTable.data-table > tbody > tr > td.sticky-start { position: sticky; left: 0; border-right: 1px solid #edf0f4; z-index: 1; }
+.alcada-widget table.dataTable.data-table > thead > tr > th.sticky-end,
+.alcada-widget table.dataTable.data-table > tbody > tr > td.sticky-end { position: sticky; right: 0; border-left: 1px solid #edf0f4; z-index: 1; }
+.alcada-widget table.dataTable.data-table > thead > tr > th.sticky-start,
+.alcada-widget table.dataTable.data-table > thead > tr > th.sticky-end { z-index: 3; }
+.alcada-widget table.dataTable.data-table > thead > tr > th .dt-column-header { gap: calc(var(--ui-unit) * 0.375); flex-direction: row; }
+.alcada-widget table.dataTable.data-table > thead > tr > th .dt-column-order { flex-shrink: 0; color: #aab6c5; }
+.alcada-widget .column-resize-handle { position: absolute; right: 0; top: 0; bottom: 0; width: 8px; cursor: col-resize; touch-action: none; z-index: 4; }
+.alcada-widget .column-resize-handle::after { content: ''; position: absolute; left: 50%; top: 25%; bottom: 25%; width: 1px; background: var(--border); }
+.alcada-widget .column-resize-handle:hover::after, .alcada-widget .column-resize-handle:focus-visible::after { background: var(--green); width: 2px; }
+.alcada-widget .data-table.is-resizing-columns, .alcada-widget .data-table.is-resizing-columns * { cursor: col-resize; user-select: none; }
+.alcada-widget table.dataTable.data-table > thead > tr > th.dt-ordering-asc,
+.alcada-widget table.dataTable.data-table > thead > tr > th.dt-ordering-desc,
+.alcada-widget table.dataTable.data-table > thead > tr > th.dt-ordering-asc .dt-column-order,
+.alcada-widget table.dataTable.data-table > thead > tr > th.dt-ordering-desc .dt-column-order { color: var(--navy); }
+.alcada-widget table.dataTable.data-table > tbody > tr > td.dt-empty { padding: 0; text-align: center; }
+.alcada-widget .table-scroll--compact table.dataTable.data-table > thead > tr > th { border-top: 0; }
+
+/* ColumnControl herda a mesma densidade, tipografia e cores dos filtros. */
+.alcada-widget {
+    --dtcc-button-icon_color: var(--navy);
+    --dtcc-button-icon_size: calc(var(--ui-unit) * 1);
+    --dtcc-button_padding: calc(var(--ui-unit) * .1875);
+    --dtcc-button_hover-background: var(--blue-soft);
+    --dtcc-dropdown_background: var(--surface);
+    --dtcc-dropdown_border: 1px solid var(--popover-border);
+    --dtcc-dropdown_border-radius: var(--popover-radius);
+    --dtcc-dropdown_box-shadow: var(--popover-shadow);
+    --dtcc-dropdown_width: calc(var(--ui-unit) * 21);
+    --dtcc-dropdown-button_color: var(--ink);
+    --dtcc-dropdown-button_hover-background: var(--option-hover);
+    --dtcc-dropdown-button_padding: calc(var(--ui-unit) * .5) calc(var(--ui-unit) * .875);
+    --dtcc-search-input_background-color: var(--field-background);
+    --dtcc-search-input_border: 1px solid var(--field-border);
+    --dtcc-search-input_border-radius: var(--popover-radius);
+    --dtcc-search-input_padding: calc(var(--ui-unit) * .5) calc(var(--ui-unit) * .625);
+    --dtcc-list-buttons_background: transparent;
+    --dtcc-list-buttons_max-height: calc(var(--ui-unit) * 17);
+    --dtcc-spacer_border: 1px solid var(--border);
+}
+.alcada-widget div.dtcc-dropdown.column-filter-menu { position: fixed; z-index: 2002; overflow-y: auto; font: var(--font-size-input)/1.5 var(--font); color: var(--ink); }
+.alcada-widget .dtcc-list button.dtcc-button_active { color: var(--green); background: var(--green-soft); }
+.alcada-widget .dtcc-list button.dtcc-button { white-space: normal; }
+.alcada-widget .dtcc-list .dtcc-button-text { white-space: normal; overflow-wrap: anywhere; }
+.alcada-widget .dtcc-list-controls input { min-height: var(--field-height); font-size: var(--font-size-input); color: var(--ink); }
+.alcada-widget .dtcc-list-controls input:focus { border-color: var(--green); box-shadow: var(--field-focus-shadow); }
+.alcada-widget .column-filter-status { padding: calc(var(--ui-unit) * .875); color: var(--muted); }
+.alcada-widget table.dataTable.data-table > thead > tr > th .dt-column-header { padding-right: 6px; }
+.alcada-widget [data-panel-id="table-region"][aria-busy="true"] tbody { opacity: .55; }
+
+.alcada-widget .data-table .dt-column-title { min-width: 0; overflow-wrap: anywhere; }
+.alcada-widget .data-table .dtcc { flex-shrink: 0; }
+
+/* Uma linha por item; cada distribuição alinha centro de custo, percentual e valor. */
+.alcada-widget .allocation-distribution-grid { display: grid; grid-template-columns: minmax(0, 1fr) calc(var(--ui-unit) * 5) calc(var(--ui-unit) * 8); align-items: center; column-gap: calc(var(--ui-unit) * .875); width: 100%; }
+.alcada-widget .allocation-distributions { display: grid; }
+.alcada-widget .allocation-distributions .allocation-distribution-grid { padding: calc(var(--ui-unit) * .625) 0; }
+.alcada-widget .allocation-distributions .allocation-distribution-grid + .allocation-distribution-grid { border-top: 1px solid var(--border); }
+.alcada-widget .allocation-distributions .allocation-distribution-grid:first-child { padding-top: 0; }
+.alcada-widget .allocation-distributions .allocation-distribution-grid:last-child { padding-bottom: 0; }
+.alcada-widget .allocation-product, .alcada-widget .allocation-cost-center { white-space: normal; overflow-wrap: anywhere; }
+.alcada-widget table.dataTable.data-table > tbody > tr:has(.allocation-distributions) > td { vertical-align: middle; }
+.alcada-widget table.dataTable.data-table > thead > tr > th:has(.allocation-distribution-grid),
+.alcada-widget table.dataTable.data-table > tbody > tr > td:has(.allocation-distributions) { border-left: 1px solid var(--border); }
+.alcada-widget .allocation-distribution-grid > span + span { border-left: 1px solid var(--border); padding-left: calc(var(--ui-unit) * .625); align-self: stretch; display: flex; align-items: center; justify-content: flex-end; }

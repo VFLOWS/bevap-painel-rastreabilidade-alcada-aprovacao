@@ -8,34 +8,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/vendor/datatables/datatables.min.css">
-    <link rel="stylesheet" href="assets/css/tokens.css">
-    <link rel="stylesheet" href="assets/css/components.css">
-    <link rel="stylesheet" href="assets/css/date-range-picker.css">
-    <link rel="stylesheet" href="assets/css/panel.css">
-    <link rel="stylesheet" href="assets/css/datatables-theme.css">
+    <link rel="stylesheet" href="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/css/datatables.css">
+    <link rel="stylesheet" href="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/css/datatables-column-control.css">
+    <link rel="stylesheet" href="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/css/tokens.css">
+    <link rel="stylesheet" href="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/css/components.css">
+    <link rel="stylesheet" href="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/css/date-range-picker.css">
+    <link rel="stylesheet" href="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/css/panel.css">
+    <link rel="stylesheet" href="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/css/datatables-theme.css">
 </head>
-<body>
+<body style="margin:0"><div class="alcada-widget" data-alcada-widget>
     <a class="skip-link" href="#requests-region">Ir para as solicitações</a>
     <div id="alcada-panel"></div>
     <div id="modal-root"></div>
     <div id="toast-root" class="toast-stack" aria-live="polite" aria-atomic="false"></div>
     <noscript>Ative o JavaScript para consultar o protótipo do Painel de Rastreabilidade.</noscript>
-    <script src="assets/vendor/datatables/datatables.min.js"></script>
-    <script src="assets/js/core/utils.js"></script>
-    <script src="assets/js/config/panel.config.js"></script>
-    <script src="assets/js/data/mock-data.js"></script>
-    <script src="assets/js/services/request.adapter.js"></script>
-    <script src="assets/js/services/request.service.js"></script>
-    <script src="assets/js/components/primitives.js"></script>
-    <script src="assets/js/components/panel-shell.js"></script>
-    <script src="assets/js/components/modal.js"></script>
-    <script src="assets/js/components/date-range-picker.js"></script>
-    <script src="assets/js/components/filter-panel.js"></script>
-    <script src="assets/js/components/table-layout.js"></script>
-    <script src="assets/js/components/data-table.js"></script>
-    <script src="assets/js/components/approval-timeline.js"></script>
-    <script src="assets/js/components/request.views.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/js/components/datatables.js"></script>
+    <script src="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/js/components/datatables-column-control.js"></script>
+    <script src="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/js/services/utils.js"></script>
+    <script src="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/js/services/panel.config.js"></script>
+    <script src="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/js/components/sheetjs.js"></script>
+    <script src="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/js/services/excel-export.service.js"></script>
+    <script src="demo/mock-data.js"></script>
+    <script src="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/js/services/request.adapter.js"></script>
+    <script src="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/js/services/request.service.js"></script>
+    <script src="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/js/components/primitives.js"></script>
+    <script src="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/js/components/loading.js"></script>
+    <script src="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/js/templates/panel.template.js"></script>
+    <script src="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/js/components/modal.js"></script>
+    <script src="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/js/components/date-range-picker.js"></script>
+    <script src="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/js/components/filter-panel.js"></script>
+    <script src="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/js/components/table-layout.js"></script>
+    <script src="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/js/components/data-table.js"></script>
+    <script src="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/js/components/approval-timeline.js"></script>
+    <script src="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/js/templates/request.template.js"></script>
+    <script src="../wcm/widget/wdPainelRastreabilidadeAlcadaAprovacao/src/main/webapp/resources/js/controllers/panel.controller.js"></script>
+</div><script src="demo/bootstrap.js"></script>
 </body>
 </html>

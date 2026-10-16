@@ -1,0 +1,69 @@
+.alcada-widget { --ui-unit: 12.8px; width: 100%; min-width: 0; text-align: left; }
+.alcada-widget {
+    /* Shared density: 80% of the original design at 100% browser zoom. */
+    --ui-scale: .8;
+    --table-scrollbar-size: calc(var(--ui-unit) * .5);
+    font-size: var(--ui-unit);
+    --navy: #3D567E;
+    --navy-dark: #263e61;
+    --green: #1C8C5D;
+    --green-dark: #157148;
+    --gold: #F1B434;
+    --ink: #17243a;
+    --muted: #69768a;
+    --border: #e1e6ee;
+    --background: #f5f7fa;
+    --surface: #ffffff;
+    --blue-soft: #edf3fc;
+    --green-soft: #ecf8f1;
+    --amber: #b76b08;
+    --amber-soft: #fff6e5;
+    --red: #ba3d42;
+    --red-soft: #fdf0f0;
+    --radius: calc(var(--ui-unit) * 0.75);
+    --shadow: 0 2px calc(var(--ui-unit) * 0.5) rgba(28, 45, 70, .035);
+    --font: Inter, Arial, sans-serif;
+    --heading-font: Montserrat, Inter, Arial, sans-serif;
+    /* Filter controls and calendar share the same typography and states. */
+    --font-size-label: calc(var(--ui-unit) * .6875);
+    --font-size-input: calc(var(--ui-unit) * .75);
+    --font-size-button: calc(var(--ui-unit) * .8125);
+    --field-height: calc(var(--ui-unit) * 2.375);
+    --field-label: #56647a;
+    --field-border: #dce2eb;
+    --field-background: #fafbfd;
+    --field-placeholder: #96a0ae;
+    --field-icon: #8491a3;
+    --filter-hint: #8490a3;
+    --option-hover: #f0f8f4;
+    --field-focus-shadow: 0 0 0 calc(var(--ui-unit) * .1875) rgba(28, 140, 93, .08);
+    --popover-border: #d1dbe6;
+    --popover-radius: calc(var(--ui-unit) * .5);
+    --popover-shadow: 0 calc(var(--ui-unit) * .75) calc(var(--ui-unit) * 1.5625) rgba(27, 47, 74, .12);
+}
+.alcada-widget * { box-sizing: border-box; }
+.alcada-widget { margin: 0; background: var(--background); color: var(--ink); font: calc(var(--ui-unit) * 0.875)/1.5 var(--font); }
+.alcada-widget button, .alcada-widget input, .alcada-widget select, .alcada-widget textarea { font: inherit; }
+.alcada-widget button, .alcada-widget a, .alcada-widget input, .alcada-widget select { -webkit-tap-highlight-color: transparent; }
+.alcada-widget button { cursor: pointer; }
+.alcada-widget button:disabled { opacity: .5; cursor: default; }
+.alcada-widget button, .alcada-widget input, .alcada-widget select { border-radius: calc(var(--ui-unit) * 0.5); }
+.alcada-widget h1, .alcada-widget h2, .alcada-widget h3, .alcada-widget h4, .alcada-widget p { margin: 0; }
+.alcada-widget h1, .alcada-widget h2, .alcada-widget h3, .alcada-widget h4 { font-family: var(--heading-font); }
+.alcada-widget a { color: var(--navy); }
+.alcada-widget[hidden], .alcada-widget [hidden] { display: none !important; }
+.alcada-widget :focus-visible { outline: calc(var(--ui-unit) * 0.1875) solid rgba(28, 140, 93, .5); outline-offset: calc(var(--ui-unit) * 0.1875); }
+.alcada-widget ::selection { background: #d9ebdf; }
+.alcada-widget .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+.alcada-widget .icon { flex-shrink: 0; display: inline-block; width: calc(var(--ui-unit) * 1.25); height: calc(var(--ui-unit) * 1.25); vertical-align: middle; }
+.alcada-widget .numeric { font-variant-numeric: tabular-nums; }
+.alcada-widget .subdued { color: var(--muted); }
+.alcada-widget .align-right { text-align: right; }
+.alcada-widget .rotate-180 { transform: rotate(180deg); }
+.alcada-widget .surface { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+.alcada-widget .eyebrow { color: var(--green); font-size: calc(var(--ui-unit) * 0.625); letter-spacing: .12em; font-weight: 700; }
+.alcada-widget .skip-link { position: fixed; left: calc(var(--ui-unit) * 1); top: calc(var(--ui-unit) * -5); z-index: 100; background: white; border-radius: calc(var(--ui-unit) * 0.375); padding: calc(var(--ui-unit) * 0.75) calc(var(--ui-unit) * 1.125); }
+.alcada-widget .skip-link:focus { top: calc(var(--ui-unit) * 0.625); }
+@media (prefers-reduced-motion: reduce) { .alcada-widget *, .alcada-widget *::before, .alcada-widget *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; } }
+.alcada-widget.panel-modal:not([open]) { display: none; }
+.alcada-widget.panel-modal[open] { display: flex; position: fixed; margin: auto; padding: 0; }

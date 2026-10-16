@@ -1,0 +1,49 @@
+.alcada-widget .date-picker { display: flex; flex-direction: column; align-items: stretch; gap: calc(var(--ui-unit) * .375); min-width: 0; width: 100%; }
+.alcada-widget .date-picker-label { color: var(--field-label); font-size: var(--font-size-label); font-weight: 600; white-space: nowrap; }
+.alcada-widget .date-picker-trigger { display: flex; align-items: center; gap: calc(var(--ui-unit) * .625); min-width: 0; width: 100%; height: var(--field-height); padding: calc(var(--ui-unit) * .5) calc(var(--ui-unit) * .75); border: 1px solid var(--field-border); color: var(--field-placeholder); background: var(--field-background); text-align: left; font-size: var(--font-size-input); }
+.alcada-widget .date-picker-trigger > span { flex: 1; }
+.alcada-widget .date-picker-trigger .icon { width: calc(var(--ui-unit) * 1); height: calc(var(--ui-unit) * 1); color: var(--field-icon); }
+.alcada-widget .date-picker-trigger .icon:last-child { width: calc(var(--ui-unit) * .875); height: calc(var(--ui-unit) * .875); }
+.alcada-widget .date-picker-trigger.has-value { color: var(--ink); }
+.alcada-widget .date-picker-trigger:hover:not(:disabled), .alcada-widget .date-picker-trigger[aria-expanded="true"] { background: var(--surface); border-color: var(--green); }
+.alcada-widget .date-picker-trigger[aria-expanded="true"] { box-shadow: var(--field-focus-shadow); }
+.alcada-widget.date-picker-popover { position: fixed; z-index: 15; display: flex; overflow: auto; background: var(--surface); border: 1px solid var(--popover-border); border-radius: var(--popover-radius); box-shadow: var(--popover-shadow); color: var(--ink); font: var(--font-size-input)/1.5 var(--font); scrollbar-width: thin; scrollbar-color: #b9c5d4 #f6f8fb; }
+.alcada-widget .date-picker-presets { flex: 0 0 calc(var(--ui-unit) * 9); display: flex; flex-direction: column; padding: calc(var(--ui-unit) * .625); gap: calc(var(--ui-unit) * .25); border-right: 1px solid var(--border); background: var(--field-background); }
+.alcada-widget .date-picker-presets > button { display: flex; align-items: center; gap: calc(var(--ui-unit) * .375); padding: calc(var(--ui-unit) * .5625) calc(var(--ui-unit) * .4375); border: 0; border-radius: calc(var(--ui-unit) * .3125); background: transparent; color: var(--ink); text-align: left; font-size: var(--font-size-input); }
+.alcada-widget .date-picker-presets > button .icon { width: calc(var(--ui-unit) * .875); height: calc(var(--ui-unit) * .875); }
+.alcada-widget .date-picker-presets > button:hover { background: var(--option-hover); }
+.alcada-widget .date-picker-presets > button[aria-pressed="true"] { color: var(--green); background: var(--option-hover); font-weight: 600; }
+.alcada-widget .date-picker-content { min-width: 0; flex: 1; }
+.alcada-widget .date-picker-navigation { display: flex; align-items: center; justify-content: space-between; gap: calc(var(--ui-unit) * .375); padding: calc(var(--ui-unit) * .5) calc(var(--ui-unit) * .625) calc(var(--ui-unit) * .25); }
+.alcada-widget .date-picker-navigation > p { font-size: var(--font-size-label); color: var(--filter-hint); text-align: center; }
+.alcada-widget .date-picker-navigation > .btn { flex-shrink: 0; }
+.alcada-widget .date-picker-months { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.alcada-widget .date-picker-month { min-width: 0; padding: calc(var(--ui-unit) * .25) calc(var(--ui-unit) * .75) calc(var(--ui-unit) * .75); }
+.alcada-widget .date-picker-month + .date-picker-month { border-left: 1px solid var(--border); }
+.alcada-widget .date-picker-month > h4 { margin-bottom: calc(var(--ui-unit) * .75); color: var(--navy); font-size: var(--font-size-button); font-weight: 600; text-align: center; text-transform: capitalize; }
+.alcada-widget .date-picker-weekdays, .alcada-widget .date-picker-days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); text-align: center; }
+.alcada-widget .date-picker-weekdays { margin-bottom: calc(var(--ui-unit) * .25); color: var(--field-label); font-size: var(--font-size-label); }
+.alcada-widget .date-picker-weekdays > span { padding: calc(var(--ui-unit) * .25) 0; }
+.alcada-widget .date-picker-day, .alcada-widget .date-picker-empty { min-width: 0; height: calc(var(--ui-unit) * 1.875); }
+.alcada-widget .date-picker-day { position: relative; border: 0; border-radius: calc(var(--ui-unit) * .375); background: transparent; color: var(--ink); padding: 0; font-size: var(--font-size-input); font-variant-numeric: tabular-nums; }
+.alcada-widget .date-picker-day.is-today::after { content: ''; position: absolute; bottom: calc(var(--ui-unit) * .1875); left: calc(50% - 1.5px); width: 3px; height: 3px; border-radius: 50%; background: var(--green); }
+.alcada-widget .date-picker-day.is-in-range { color: var(--green-dark); background: var(--green-soft); border-radius: 0; }
+.alcada-widget .date-picker-day:hover { color: var(--green); background: var(--option-hover); }
+.alcada-widget .date-picker-day.is-range-start, .alcada-widget .date-picker-day.is-range-end { color: var(--surface); background: var(--green); }
+.alcada-widget .date-picker-day.is-preview { background: var(--green-soft); color: var(--green-dark); }
+.alcada-widget .date-picker-day[aria-pressed="true"] { background: var(--green); color: var(--surface); }
+.alcada-widget .date-picker-day.is-range-start.is-today::after, .alcada-widget .date-picker-day.is-range-end.is-today::after { background: var(--surface); }
+.alcada-widget .date-picker-day:focus-visible { z-index: 1; outline-offset: -2px; }
+.alcada-widget .date-picker-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: calc(var(--ui-unit) * .625); padding: calc(var(--ui-unit) * .75); border-top: 1px solid var(--border); }
+.alcada-widget .date-picker-summary { font-size: var(--font-size-input); color: var(--ink); font-variant-numeric: tabular-nums; }
+.alcada-widget .date-picker-summary > small { display: block; color: var(--filter-hint); font-size: var(--font-size-label); margin-top: calc(var(--ui-unit) * .125); }
+.alcada-widget .date-picker-footer > div { display: flex; gap: calc(var(--ui-unit) * .25); margin-left: auto; }
+@media (max-width: 480px) {
+    .alcada-widget.date-picker-popover { flex-direction: column; }
+    .alcada-widget .date-picker-presets { flex: none; flex-direction: row; flex-wrap: wrap; border-right: 0; border-bottom: 1px solid var(--border); gap: calc(var(--ui-unit) * .25); }
+    .alcada-widget .date-picker-presets > button { padding: calc(var(--ui-unit) * .375) calc(var(--ui-unit) * .625); }
+    .alcada-widget .date-picker-months { grid-template-columns: 1fr; }
+    .alcada-widget .date-picker-month { padding: calc(var(--ui-unit) * .5) calc(var(--ui-unit) * 1) calc(var(--ui-unit) * .75); }
+    .alcada-widget .date-picker-month + .date-picker-month { border-left: 0; border-top: 1px solid var(--border); }
+    .alcada-widget .date-picker-day, .alcada-widget .date-picker-empty { height: calc(var(--ui-unit) * 2.25); }
+}
